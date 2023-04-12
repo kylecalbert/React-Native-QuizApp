@@ -1,13 +1,17 @@
-import { NavigationContainer } from "@react-navigation/native";
-import React from "react";
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
 
-import AppContainer from "./AppContainer.jsx";
+import AppContainer from './AppContainer.jsx';
+
+import { QuizProvider } from '../context/QuizContext.js';
 
 const RouteContainer = () => {
   return (
-    <NavigationContainer>
-      <AppContainer />
-    </NavigationContainer>
+    <QuizProvider>
+      <NavigationContainer>
+        <AppContainer />
+      </NavigationContainer>
+    </QuizProvider>
   );
 };
 
